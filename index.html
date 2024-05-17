@@ -9,24 +9,24 @@
         body {
             background-color: #eeeee4;
         }
+        .text-center{
+            text-align: center;
 
-        .Receipt-header {
+        }
+        .dashed-bottom{
             border-bottom: 1px dashed gray;
         }
 
+        
         .brand-logo {
             width: 100px;
             display: block;
             margin: 0 auto;
         }
 
-        .brand-title {
-            text-align: center;
-        }
+           
         .Receipt-body{
             position: relative;
-            border-bottom: 1px dashed gray;
-            
         }
 
         .Receipt-container {
@@ -48,7 +48,7 @@
         }
 
         .Receipt-title {
-            text-align: center;
+           
             font-size: 30px;
             margin: 40px 0;
         }
@@ -65,7 +65,6 @@
         }
         .Receipt-detail-value{
          font-weight: bold;
-         border-bottom: 1px dashed gray;
          width: 30%;
         }
         .Account-Signature{
@@ -81,9 +80,9 @@
             transform: rotate(-20deg);
         }
         .Receipt-footer{
-            text-align: center;
-            padding: 20px 0;
-            font-size: 20px;
+           
+            padding: 10px 0;
+            font-size: 30px;
             background-color: #ffca39;
 
         }
@@ -93,9 +92,9 @@
 
 <body>
     <div class="Receipt-container">
-        <div class="Receipt-header">
+        <div class="Receipt-header dashed-bottom">
             <img src="logo.png" class="brand-logo" />
-            <h2 class="brand-title">Road To Code</h2>
+            <h2 class="brand-title text-center" >Road To Code</h2>
             <p class="brand-address">404, above lotus hospital,<br>
                 shevvalvadi hadpsar,<br>
                 pune - 4122003</p>
@@ -104,29 +103,29 @@
             </p>
 
         </div>
-        <div class="Receipt-body">
-            <h3 class="Receipt-title">payment Receipt</h3>
+        <div class="Receipt-body dashed-bottom">
+            <h3 class="Receipt-title text-center" >payment Receipt</h3>
             <div class="Receipt-details">
-                <div class="Receipt-detail-key">
+                <div class="Receipt-detail-key ">
                     Receipt No. :
                 </div>
-                <div class="Receipt-detail-value">
+                <div class="Receipt-detail-value dashed-bottom">
                   8975253097
                 </div>
             </div>
             <div class="Receipt-details">
-                <div class="Receipt-detail-key">
+                <div class="Receipt-detail-key ">
                    Amount :
                 </div>
-                <div class="Receipt-detail-value">
+                <div class="Receipt-detail-value dashed-bottom">
                 3000/
                 </div>
             </div>
-            <div class="Receipt-details">
+            <div class="Receipt-details ">
                 <div class="Receipt-detail-key">
                    payment mode :
                 </div>
-                <div class="Receipt-detail-value">
+                <div class="Receipt-detail-value dashed-bottom">
                  UPI
                 </div>
             </div>
@@ -134,7 +133,7 @@
                 <div class="Receipt-detail-key">
                   payment Date :
                 </div>
-                <div class="Receipt-detail-value">
+                <div class="Receipt-detail-value dashed-bottom">
                  15/may/2024
                 </div>
             </div>
@@ -146,7 +145,7 @@
             </p>
         </div>
         <p> This is a Computer generate Receipt and does not require any</p>
-        <div class="Receipt-footer">
+        <div class="Receipt-footer text-center" >
             <p>Thank You for your payment</p>
            
         </div>
