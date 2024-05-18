@@ -1,196 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt Design</title>
-<style>
-    body {
-    background-color: #eeeee4;
+    <title>Receipt</title>
+ <style>body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.dashed-bottom {
-    border-bottom: 1px dashed gray;
-}
-
-.brand-logo {
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-}
-
-.Receipt-body {
-    position: relative;
-}
-
-.Receipt-container {
-    width: 80%;
+.receipt-container {
+    width: 90%;
     max-width: 600px;
-    border: 1px solid gray;
-    margin: 20px auto;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.brand-address,
-.brand-mob {
-    text-align: right;
-}
-
-.Receipt-title {
-    font-size: 24px;
-    margin: 20px 0;
-}
-
-.Receipt-details {
+.receipt-header {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
-    margin: 10px 0;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.Receipt-detail-key {
-    color: gray;
-    width: 50%;
+.logo {
+    max-width: 100px;
 }
 
-.Receipt-detail-value {
-    font-weight: bold;
-    width: 50%;
+.company-details h1 {
+    margin: 0;
+    font-size: 1.5em;
 }
 
-.Account-Signature {
+.receipt-body h2 {
+    margin-top: 0;
+}
+
+.buyer-details {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.items-table th, .items-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+.items-table th {
+    background-color: #f0f0f0;
+}
+
+.total-label {
     text-align: right;
-    margin-top: 50px;
+    padding-right: 20px;
 }
 
-.stamp {
-    width: 80px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    transform: rotate(-20deg);
+.total-amount {
+    text-align: right;
 }
 
-.Receipt-footer {
-    padding: 10px 0;
-    font-size: 18px;
-    background-color: #ffca39;
+.receipt-footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
 }
-
-@media (max-width: 768px) {
-    .Receipt-container {
-        width: 90%;
-    }
-
-    .Receipt-title {
-        font-size: 20px;
-    }
-
-    .Receipt-details {
-        font-size: 14px;
-    }
-
-    .Receipt-footer {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .brand-logo {
-        width: 80px;
-    }
-
-    .Receipt-details {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .Receipt-detail-key,
-    .Receipt-detail-value {
-        width: 100%;
-    }
-
-    .Receipt-title {
-        font-size: 18px;
-    }
-
-    .Receipt-footer {
-        font-size: 14px;
-    }
-}
-
 </style>
 </head>
-
 <body>
-    <div class="Receipt-container">
-        <div class="Receipt-header dashed-bottom">
-            <img src="logo.png" class="brand-logo" />
-            <h2 class="brand-title text-center">Road To Code</h2>
-            <p class="brand-address">404, above lotus hospital,<br>
-                shevvalvadi hadpsar,<br>
-                pune - 4122003</p>
-            <p class="brand-mob">
-                +91 9373833203
-            </p>
-        </div>
-        <div class="Receipt-body dashed-bottom">
-            <h3 class="Receipt-title text-center">Payment Receipt</h3>
-            <div class="Receipt-details">
-                <div class="Receipt-detail-key">
-                    Receipt No. :
-                </div>
-                <div class="Receipt-detail-value dashed-bottom">
-                    8975253097
-                </div>
+    <div class="receipt-container">
+        <header class="receipt-header">
+            <img src="logo1.png" alt="Company Logo" class="logo">
+            <div class="company-details">
+                <h1>Atharv Kirana</h1>
+                <p>1234 hanuman mandir,<br>Amravati, maharashtra.</p>
             </div>
-            <div class="Receipt-details">
-                <div class="Receipt-detail-key">
-                    Amount :
-                </div>
-                <div class="Receipt-detail-value dashed-bottom">
-                    3000/-
-                </div>
+        </header>
+        <section class="receipt-body">
+            <h2>Receipt</h2>
+            <p><strong>Date:</strong> May 17, 2024</p>
+            <p><strong>Receipt No:</strong> 0012345</p>
+            <div class="buyer-details">
+                <p><strong>Buyer:</strong></p>
+                <p>sumit kolhe,<br> Lane Dr,<br>Amravati, maharashtra .</p>
             </div>
-            <div class="Receipt-details">
-                <div class="Receipt-detail-key">
-                    Payment Mode :
-                </div>
-                <div class="Receipt-detail-value dashed-bottom">
-                    UPI
-                </div>
-            </div>
-            <div class="Receipt-details">
-                <div class="Receipt-detail-key">
-                    Payment Date :
-                </div>
-                <div class="Receipt-detail-value dashed-bottom">
-                    15/May/2024
-                </div>
-            </div>
-            <img src="stamp.png" class="stamp" />
-            <p class="Account-Signature">Account Signature
-                <br>
-                <br>
-                <br>
-            </p>
-        </div>
-        <p>This is a computer generated receipt and does not require any signature.</p>
-        <div class="Receipt-footer text-center">
-            <p>Thank You for your payment</p>
-        </div>
+            <table class="items-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sugar</td>
+                        <td>2 kg</td>
+                        <td>80.00</td>
+                        <td>80.00</td>
+                    </tr>
+                    <tr>
+                        <td>Fortune Soya Oil</td>
+                        <td>1 k</td>
+                        <td>150.00</td>
+                        <td>150.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="total-label">Total</td>
+                        <td class="total-amount">230.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <footer class="receipt-footer">
+            <p>Thank you for your business!</p>
+        </footer>
     </div>
 </body>
-
 </html>
